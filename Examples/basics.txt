@@ -1,0 +1,26 @@
+Each adventure will be composed of a storyfile, linking arching paths together and containing settings for the project.
+Within the storyfile, chapterfiles are organized which represent chunks of actual text, commands, etc, and may contain minor logic themselves.
+The main path of the story is handled by the storyfile, and each chapterfile returns a value by the end which dictates the next chapterfile according to storyfile logic.
+
+STORYFILE
+----------
+blah blahj asdofijasdf
+as
+dfasdf
+asdfasdf
+(placeholder)
+
+
+CHAPTERFILE
+------------
+A chapterfile prints all text enclosed within a delimiter of a newline with three dashes, '---'.
+By default a chapterfile executes from top to bottom.
+All text not enclosed within the dash delimiters is treated as commands. By default the script is assumed to be bespoke-script,
+but by beginning the section with the magic word: "PYTHON" the script is treated as raw python code, and executed accordingly.
+
+
+SETTING UP A BASIC STORY
+-------------------------
+This should guide you through the creation of your first bare-basics adventure.
+First, initialize a blank storyfile and chapterfile through the story_designer.py program.
+The storyfile will be named 'story.st' by default, and the first chapter 'chapter_1.chap'.

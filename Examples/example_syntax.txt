@@ -1,0 +1,33 @@
+--- entry_point
+Hello how are you? This is example syntax for the bespoke engine
+All of these lines should be printed one-by-one with a small delay
+After that you will be presented with a choice
+
+Do you want to continue?
+---
+
+PROMPT
+if (yes/okay/sure):
+	goto user_yes
+elif (no/nope/no way):
+	goto user_no
+else:
+	goto user_invalid
+
+--- user_no
+Ugh, fine then.
+--- goto quit
+
+--- user_invalid
+Sorry, I don't quite understand...
+You should try this again.
+--- goto entry_point
+
+--- user_yes
+Glad you said yes!
+What's your name?
+---
+
+PROMPT := username
+
+--- 
